@@ -3,12 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insurance.API", "Insurance.API\Insurance.API.csproj", "{2812A30E-99C4-4813-96D7-995495D6EF4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insurance.API", "Insurance.API\Insurance.API.csproj", "{2812A30E-99C4-4813-96D7-995495D6EF4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insurance.Tests", "Insurance.Tests\Insurance.Tests.csproj", "{F1B96BA3-1F91-4866-9A78-89F6A604AF5D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{2812A30E-99C4-4813-96D7-995495D6EF4E} = {2812A30E-99C4-4813-96D7-995495D6EF4E}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insurance.IdentityServer", "Insurance.IdentityServer\Insurance.IdentityServer.csproj", "{87044CAA-3A96-4C89-BF9D-C5EA4FC83BCA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Insurance.Tests", "Insurance.Tests\Insurance.Tests.csproj", "{98065E86-5DD9-4FFC-83B3-F86345CD8D3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +19,14 @@ Global
 		{2812A30E-99C4-4813-96D7-995495D6EF4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2812A30E-99C4-4813-96D7-995495D6EF4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2812A30E-99C4-4813-96D7-995495D6EF4E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F1B96BA3-1F91-4866-9A78-89F6A604AF5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F1B96BA3-1F91-4866-9A78-89F6A604AF5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F1B96BA3-1F91-4866-9A78-89F6A604AF5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F1B96BA3-1F91-4866-9A78-89F6A604AF5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87044CAA-3A96-4C89-BF9D-C5EA4FC83BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87044CAA-3A96-4C89-BF9D-C5EA4FC83BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87044CAA-3A96-4C89-BF9D-C5EA4FC83BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87044CAA-3A96-4C89-BF9D-C5EA4FC83BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98065E86-5DD9-4FFC-83B3-F86345CD8D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98065E86-5DD9-4FFC-83B3-F86345CD8D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98065E86-5DD9-4FFC-83B3-F86345CD8D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98065E86-5DD9-4FFC-83B3-F86345CD8D3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

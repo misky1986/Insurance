@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Insurance.API.Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -30,14 +28,18 @@ namespace Insurance.API
         {
             services.AddSingleton(_config);
 
-            services.AddMvc( opt =>
-            {
-                if(!_env.IsProduction())
+            services.AddMvcCore()
+                .AddAuthorization()
+                .AddJsonFormatters();
+
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(options =>
                 {
-                    opt.SslPort = 44388;
-                }
-                opt.Filters.Add(new RequireHttpsAttribute());
-            });
+                    options.Authority = "http://localhost:5000";
+                    options.RequireHttpsMetadata = false;
+
+                    options.ApiName = "api1";
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -48,7 +50,9 @@ namespace Insurance.API
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+
+            app.UseAuthentication();
+
             app.UseMvc();
         }
     }

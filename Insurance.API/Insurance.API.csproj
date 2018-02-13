@@ -5,25 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Repository\InsuranceContext.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Repository\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="IdentityServer4.AccessTokenValidation" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="Repository\InsuranceContext.cs" />
   </ItemGroup>
 
 </Project>
