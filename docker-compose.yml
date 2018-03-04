@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  insurance.api:
+    image: insurance.api
+    build:
+      context: .
+      dockerfile: Insurance.API/Dockerfile
